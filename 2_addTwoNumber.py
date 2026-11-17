@@ -10,6 +10,9 @@ class ListNode:
 # 연결리스트 조회할때는 next 쓰면서하기
 # 연결 리스트를 만들때는 반복문 돌면서 노드를 생성하면서 가야함
 
+#이 풀이는 문제점 --> 정수가 커지면 overflow가 날 수 있는 풀이다
+#각각 비교하는 풀이가 필요하다
+
 class Solution:
     def addTwoNumbers(self, l1: ListNode | None, l2: ListNode | None) -> ListNode | None:
 
@@ -34,7 +37,7 @@ class Solution:
         #Build list
         #노드를 만들면서 추가하고 next로
         #cur이라는 변수 꼭 이용하기
-        
+
         for ch in str(total)[::-1]:
             #Node를 생성하면서 연결
             cur.next = ListNode(int(ch))

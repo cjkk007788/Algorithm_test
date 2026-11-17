@@ -8,7 +8,6 @@ class Solution1:
             {1:'M'}
         ]
 
-
         result = ""
 
         for power in range(3,-1,-1):
@@ -50,7 +49,6 @@ class Soultion3:
 
         result = ""
         for number , rn in pairs :
-
             count, num = divmod(num, number)
             result = result + rn * count
         return result
