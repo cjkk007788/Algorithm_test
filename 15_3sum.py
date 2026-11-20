@@ -80,7 +80,7 @@ class Soultion2:
 
             l = i + 1
             h = n-1
-
+        
             while l < h:
                 sum = nums[i] + nums[l] + nums[h]
                 if sum < 0 :
@@ -96,5 +96,5 @@ class Soultion2:
                         l = l + 1
                     while l < h and nums[h] == nums[h+1]:
                         h = h - 1
-            return result
+        return result
         
