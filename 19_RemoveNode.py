@@ -36,6 +36,27 @@ class Solution:
 
         return head
 
+class Solution2:
+    def removeNthFromEnd(self,head:ListNode | None, n:int)->ListNode|None:
+
+        dumy = ListNode(0,head)
+        fast = slow = dumy
+
+        #fast를 먼저 이동
+        for _ in range(n):
+            fast = fast.next
+
+        #fast가 끝에 도달하면 삭제 대상은 slow next
+        while fast.next : 
+            fast = fast.next
+            slow = slow.next
+
+        slow = slow.next
+
+        return dumy.next
+    
+
+        
 
 def arrayTo_link(array):
 
